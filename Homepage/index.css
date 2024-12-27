@@ -39,6 +39,7 @@ header{
     text-decoration: none;
     padding: 28px 0;
     border-bottom:3px solid #ffffff ;
+
 }
 
 .nav_bar a:hover{
@@ -58,6 +59,7 @@ header{
     width: 30%;
     display: flex;
     align-items: center;
+    margin: 10px;
 }
 .search_icon{
     box-sizing: content-box;
@@ -81,13 +83,20 @@ header{
     display: flex;
     min-width: 200px;
     justify-content: space-evenly;
+    margin-right: 5%;
 }
 .action_container{
     
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
 }
+
+
+
 .action_name{
     font-size: 12px;
     font-weight: 700;
@@ -95,6 +104,23 @@ header{
 
 .action_symbol{
     font-weight: 200;
+}
+
+.bag-item-count{
+    background-color: #f16565;
+    white-space: nowrap;
+    text-align: center;
+    line-height: 18px;
+    padding: 0 6px;
+    height: 18px;
+    position: relative;
+    border-radius: 50%;
+    font-size: 12px;
+    color: #fff;
+    left: 13px;
+    top: -44px;
+    font-weight: 700;
+    cursor: pointer;
 }
 
 /* .......Main Section....... */
@@ -205,4 +231,69 @@ header{
     color: #94969f;
     text-align: end;
     padding: 15px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .nav_bar {
+        min-width: 400px;
+    }
+    .search_bar {
+        width: 40%;
+    }
+    .action_bar {
+        min-width: 150px;
+    }
+}
+
+@media (max-width: 845px) {
+    
+    .nav_bar {
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        top: 80px;
+        max-height: 0;
+        min-width:215px ;
+        background-color:white;
+        text-align: center;
+        z-index: 5;
+        overflow: hidden;
+        transition: 0.5s;
+    }
+
+    .nav_bar.open-menu{
+       max-height: 500px;
+    }
+}
+
+
+
+@media (max-width: 576px) {
+    .search_bar {
+        width: 100%;
+    }
+    .category_items {
+        flex-direction: column;
+        align-items: center;
+    }
+    .sale_item {
+        width: 100%;
+        height: auto;
+    }
+    .footer_container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer_column {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 440px){
+    .search_bar{
+        position: absolute;
+        top: 80px;
+        margin: 0;
+    }
 }
